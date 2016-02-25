@@ -19,14 +19,21 @@ Tested with:
 
 ### Create a Kafka topic if you don't have one yet:
 
+The example code below assumes you are running this command on a server:
+- that has the Kafka client software installed
+- that has a zookeeper instance running
+
+If you do not have a local zookeeper, make sure to use the IP address of one of the Zookeeper servers. 
+
     su - kafka
-    # Create the sparkstreaming topic
     /usr/hdp/current/kafka-broker/bin/kafka-topics.sh \
         --create --zookeeper localhost:2181 \
         --replication-factor 1 \ 
         --partitions 1 \ 
         --topic sparkstreaming
-    # Check if the topic now exists
+
+You can check if the topic now exists:
+
     /usr/hdp/current/kafka-broker/bin/kafka-topics.sh --list --zookeeper localhost:2181
 
 Once the topic has been created, it will remain available until explicitly removed.
