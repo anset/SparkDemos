@@ -7,7 +7,7 @@ The Spark streaming job will read the text events from the topic, calculate the 
 ## Step 1 - Set up a Kafka topic to stream from 
 
 
-** This Step 1 is optional: A global Kafka topic has been prepared for you so you can use the information provided by the instructor to connect to that Kafka broker.**
+**This Step 1 is optional: A global Kafka topic has been prepared for you so you can use the information provided by the instructor to connect to that Kafka broker.**
  
 ### Create a Kafka topic if you don't have one yet:
 
