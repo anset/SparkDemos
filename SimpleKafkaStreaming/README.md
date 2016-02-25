@@ -11,7 +11,7 @@ The Spark streaming job will read the text events from the topic, calculate the 
 Tested with:
 ```
 - HDP 2.3.4 
-- Apache Kafka
+- Apache Kafka 0.9.0
 - Apache Spark 1.5.2
 ```
 
