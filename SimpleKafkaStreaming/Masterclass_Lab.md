@@ -46,7 +46,7 @@ Use the [direct_kafka_wordcount.py](https://raw.githubusercontent.com/anset/Spar
                  --master yarn-client \
                  ./direct_kafka_wordcount.py 192.168.2.53:6667 sparkstreaming
 
-**Note:** Make sure that the ip address and port on the last part of this command points to your Kafka broker 
+**Note:** Make sure that the ip address and port on the last part of this command points the Kafka broker 
 
 Once started, this script will continue to run until you press Ctrl-C. After the spark context is created, verbose logging is disabled so the real output can easily be seen:
 
