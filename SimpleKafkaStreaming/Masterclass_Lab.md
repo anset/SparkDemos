@@ -39,7 +39,7 @@ This command will run until you press Ctrl-C. It does not print anything on the 
 
 ## Step 2 - Start the Spark Streaming job
 
-On this page you can find the direct_kafka_wordcount.py python script that has the pyspark code for this example.
+Use the [direct_kafka_wordcount.py](https://raw.githubusercontent.com/anset/SparkDemos/master/SimpleKafkaStreaming/direct_kafka_wordcount.py) python script that has the pyspark code for this example.
 
     su - spark
     spark-submit --packages org.apache.spark:spark-streaming-kafka_2.10:1.5.2 \
