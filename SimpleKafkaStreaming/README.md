@@ -21,7 +21,11 @@ Tested with:
 
     su - kafka
     # Create the sparkstreaming topic
-    /usr/hdp/current/kafka-broker/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic sparkstreaming
+    /usr/hdp/current/kafka-broker/bin/kafka-topics.sh \
+        --create --zookeeper localhost:2181 \
+        --replication-factor 1 \ 
+        --partitions 1 \ 
+        --topic sparkstreaming
     # Check if the topic now exists
     /usr/hdp/current/kafka-broker/bin/kafka-topics.sh --list --zookeeper localhost:2181
 
@@ -40,7 +44,10 @@ For the below example, you can download the War and Peace Novel by Leo Tolstoy f
     wget http://www.gutenberg.org/cache/epub/2600/pg2600.txt -O War_and_Peace.txt
 
     su - kafka
-    ./loop.sh ./War_and_Peace.txt | /usr/hdp/current/kafka-broker/bin//kafka-console-producer.sh --broker-list 192.168.2.53:6667 --topic sparkstreaming
+    ./loop.sh ./War_and_Peace.txt | \
+        /usr/hdp/current/kafka-broker/bin//kafka-console-producer.sh \
+        --broker-list 192.168.2.53:6667 \ 
+        --topic sparkstreaming
 
 
 This command will run until you press Ctrl-C. It does not print anything on the terminal.
