@@ -17,19 +17,17 @@ Tested with:
 
 ## Step 1: Set up a Kafka topic to stream from 
 
-1. Create a Kafka topic if you don't have one yet:
+### Create a Kafka topic if you don't have one yet:
 
-```
-su - kafka
-# Create the sparkstreaming topic
-/usr/hdp/current/kafka-broker/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic sparkstreaming
-# Check if the topic now exists
-/usr/hdp/current/kafka-broker/bin/kafka-topics.sh --list --zookeeper localhost:2181
-````
+    su - kafka
+    # Create the sparkstreaming topic
+    /usr/hdp/current/kafka-broker/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic sparkstreaming
+    # Check if the topic now exists
+    /usr/hdp/current/kafka-broker/bin/kafka-topics.sh --list --zookeeper localhost:2181
 
 Once the topic has been created, it will remain available until explicitly removed.
 
-2. Send text to the Kafka topic
+### Send text to the Kafka topic
 
 On this page you can download the loop.sh script which is a very simple bash shell script that will echo random lines from a text document until the sript is stopped with Ctrl-C. By sending the output of this script to the Kafka topic, the Spark streaming job will get a continuous feed of events to process.
 
@@ -37,9 +35,13 @@ The loop.sh script takes the name of the text file to use as a command line argu
 
 *Note*: Make sure that the --broker-list option has the correct ip address and port of your Kafka service. If you do not know what it is, go to the Kafka config page in Apache Ambari to find the IP address and port number. Be aare that 'localhost' will most likely be replaced by the substituted with the primary IP address of your server. Use a tool like netstat -ntulp to make sure you are using the correct ip address.
 
-```
-./loop.sh ./War_and_Peace.txt | /usr/hdp/current/kafka-broker/bin//kafka-console-producer.sh --broker-list 192.168.2.53:6667 --topic sparkstreaming
-```
+For the below example, you can download the War and Peace Novel by Leo Tolstoy from the Project Gutenberg website: 
+
+    wget http://www.gutenberg.org/cache/epub/2600/pg2600.txt -O War_and_Peace.txt
+
+    su - kafka
+    ./loop.sh ./War_and_Peace.txt | /usr/hdp/current/kafka-broker/bin//kafka-console-producer.sh --broker-list 192.168.2.53:6667 --topic sparkstreaming
+
 
 This command will run until you press Ctrl-C. It does not print anything on the terminal.
 
@@ -48,12 +50,10 @@ This command will run until you press Ctrl-C. It does not print anything on the 
 
 On this page you can find the direct_kafka_wordcount.py python script that has the pyspark code for this example.
 
-```
-su - spark
-spark-submit --packages org.apache.spark:spark-streaming-kafka_2.10:1.5.2 \
-             --master yarn-client \
-             ./direct_kafka_wordcount.py 192.168.2.53:6667 sparkstreaming
-```
+    su - spark
+    spark-submit --packages org.apache.spark:spark-streaming-kafka_2.10:1.5.2 \
+                 --master yarn-client \
+                 ./direct_kafka_wordcount.py 192.168.2.53:6667 sparkstreaming
 
 The first option references the streaming jar that contains the Kafka Utils for Spark streaming. If these libraries are not available on your system, they will automatically be downloaded and installed for you.
 
