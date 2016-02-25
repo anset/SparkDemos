@@ -137,5 +137,5 @@ First make sure you have the correct Hostory server: Use the "quick Links" on th
 
  You will notice the presence of a "Streaming" tab where you can follow the execution of the streaming job.
  
- ![Spark History Server Streaming Statistics](https://github.com/anset/SparkDemos/tree/master/SimpleKafkaStreaming/HistoryServerStreamingStatistics.png)
+ ![Spark History Server Streaming Statistics](https://raw.githubusercontent.com/anset/SparkDemos/master/SimpleKafkaStreaming/HistoryServerStreamingStatistics.png)
 
