@@ -15,7 +15,7 @@ Tested with:
 - Apache Spark 1.5.2
 ```
 
-## Step 1: Set up a Kafka topic to stream from 
+## Step 1 - Set up a Kafka topic to stream from 
 
 ### Create a Kafka topic if you don't have one yet:
 
@@ -60,7 +60,7 @@ For the below example, you can download the War and Peace Novel by Leo Tolstoy f
 This command will run until you press Ctrl-C. It does not print anything on the terminal.
 
 
-## Step 2 Start the Spark Streaming job
+## Step 2 - Start the Spark Streaming job
 
 On this page you can find the direct_kafka_wordcount.py python script that has the pyspark code for this example.
 
@@ -111,22 +111,19 @@ Number of distinct words found = 82
 
 Top 100 words counted list:
 
-[(u'the', 9), (u'', 5), (u'he', 5), (u'of', 4), (u'not', 3), (u'at', 3), (u'that', 3), (u'his', 3), (u'and', 2), (u'had', 2), (u'as', 2), (u'was', 2), (u'but', 2), (u'pistol', 2), (u'"Father', 2), (u'He', 2), (u'pupils,', 1), (u'words', 1), (u'being', 1), (u'over', 1), (u'raised', 1), (u'aimed.', 1), (u'best', 1), (u'brightness,', 1), (u'looking', 1), (u'her', 1), (u'muddy', 1), (u'Natasha,', 1), (u'him.', 1), (u'behind', 1), (u'freshly', 1), (u'trigger,', 1), (u'contrary', 1), (u'varnished.', 1), (u'unnatural,', 1), (u'unpleasant,', 1), (u'merry', 1), (u"gypsies',", 1), (u'CHAPTER', 1), (u'with', 1), (u'change', 1), (u'a', 1), (u'sister', 1), (u'strength.', 1), (u'did', 1), (u'exceptionally', 1), (u'Kamenski"', 1), (u'Down', 1), (u'replaced', 1), (u'fact', 1), (u'house', 1), (u'it', 1), (u'an', 1), (u'held', 1), (u'recollection', 1), (u'in', 1), (u'girlish', 1), (u'seen', 1), (u'clearly', 1), (u'before', 1), (u'Sometimes', 1), (u'no', 1), (u"Rostovs'", 1), (u'whom', 1), (u'unaccustomed', 1), (u'therefore', 1), (u'recognize', 1), (u'hand--a', 1), (u'gave', 1), (u'road.', 1), (u'though', 1), (u'who', 1), (u'heard', 1), (u'how', 1), (u'Otradnoe.', 1), (u'below,', 1), (u'by', 1), (u'cries', 1), (u'VII', 1), (u'glittering', 1), (u'were', 1), (u'result', 1)]
-
-======================================
-
-
-
-
-======================================
-= Batch Result @ 2016-02-25 08:46:40 =
-======================================
-
-Number of distinct words found = 142
-
-Top 100 words counted list:
-
-[(u'and', 11), (u'to', 7), (u'the', 4), (u'her', 3), (u'will', 3), (u'I', 3), (u'at', 3), (u'Prince', 3), (u'', 2), (u'him.', 2), (u'me', 2), (u'moment', 2), (u'but', 2), (u'they', 2), (u'Vasili', 2), (u'Old', 2), (u'a', 2), (u'this,', 2), (u'in', 2), (u'that', 2), (u'be', 2), (u'his', 2), (u'if', 2), (u'of', 2), (u'she', 2), (u'CHAPTER', 1), (u'all', 1), (u'heard,', 1), (u'understand', 1), (u'opposite.', 1), (u'am', 1), (u'whisper,', 1), (u'paused', 1), (u'"Yes,', 1), (u'see', 1), (u'Tikhon,', 1), (u'"Mamma,', 1), (u'smile.', 1), (u'as', 1), (u'travels', 1), (u'from', 1), (u'with', 1), (u'squirrel-like', 1), (u'wound', 1), (u'Helene,', 1), (u'But', 1), (u'tears', 1), (u'came', 1), (u'right,', 1), (u'wasted', 1), (u'XXI', 1), (u'attentively', 1), (u'into', 1), (u'want', 1), (u'wearing', 1), (u'wife.', 1), (u'letter', 1), (u"fiancee's", 1), (u'alight,', 1), (u'is', 1), (u'court', 1), (u'serve', 1), (u'realized', 1), (u'complacently.', 1), (u'let', 1), (u'report', 1), (u'joyful,', 1), (u'My', 1), (u'you', 1), (u'Talk', 1), (u'Beautiful', 1), (u'ryefield', 1), (u'about', 1), (u'meant', 1), (u'was', 1), (u'confused,', 1), (u'clever...', 1), (u'say', 1), (u'men,', 1), (u'nothing', 1), (u'talk', 1), (u'wedding,', 1), (u'went', 1), (u'my', 1), (u'meaning', 1), (u"folk.'", 1), (u'befriend', 1), (u'her.', 1), (u'Mamma?"', 1), (u'sister.', 1), (u'house', 1), (u'last.', 1), (u'it', 1), (u'received', 1), (u'Sonya', 1), (u'are', 1), (u'pass', 1), (u'me,', 1), (u'Nicholas', 1), (u'once', 1)]
+[(u'the', 9), (u'', 5), (u'he', 5), (u'of', 4), (u'not', 3), (u'at', 3), (u'that', 3), (u'his', 3),
+(u'and', 2), (u'had', 2), (u'as', 2), (u'was', 2), (u'but', 2), (u'pistol', 2), (u'"Father', 2), 
+(u'He', 2), (u'pupils,', 1), (u'words', 1), (u'being', 1), (u'over', 1), (u'raised', 1), 
+(u'aimed.', 1), (u'best', 1), (u'brightness,', 1), (u'looking', 1), (u'her', 1), (u'muddy', 1), 
+(u'Natasha,', 1), (u'him.', 1), (u'behind', 1), (u'freshly', 1), (u'trigger,', 1), (u'contrary', 1), 
+(u'varnished.', 1), (u'unnatural,', 1), (u'unpleasant,', 1), (u'merry', 1), (u"gypsies',", 1), 
+(u'CHAPTER', 1), (u'with', 1), (u'change', 1), (u'a', 1), (u'sister', 1), (u'strength.', 1), 
+(u'did', 1), (u'exceptionally', 1), (u'Kamenski"', 1), (u'Down', 1), (u'replaced', 1), (u'fact', 1), 
+(u'house', 1), (u'it', 1), (u'an', 1), (u'held', 1), (u'recollection', 1), (u'in', 1), (u'girlish', 1),
+(u'seen', 1), (u'clearly', 1), (u'before', 1), (u'Sometimes', 1), (u'no', 1), (u"Rostovs'", 1), 
+(u'whom', 1), (u'unaccustomed', 1), (u'therefore', 1), (u'recognize', 1), (u'hand--a', 1), (u'gave', 1), 
+(u'road.', 1), (u'though', 1), (u'who', 1), (u'heard', 1), (u'how', 1), (u'Otradnoe.', 1), 
+(u'below,', 1), (u'by', 1), (u'cries', 1), (u'VII', 1), (u'glittering', 1), (u'were', 1), (u'result', 1)]
 
 ======================================
 
@@ -134,5 +131,11 @@ Top 100 words counted list:
 
 ```
 
+## Step 3 - Monitor job progression in the Spark History Server UI
 
+First make sure you have the correct Hostory server: Use the "quick Links" on the YARN page in Ambari to go to the "Resource manager UI". Find the spark jib in the list and click on the application ID to access the application details page. In this page, you can click on the "ApplicationMaster link" which will connect you to the correct Spark History Server instance for your streaming job.
+
+ You will notice the presence of a "Streaming" tab where you can follow the execution of the streaming job.
+ 
+ ![Spark History Server Streaming Statistics](https://github.com/anset/SparkDemos/tree/master/SimpleKafkaStreaming/HistoryServerStreamingStatistics.png)
 
