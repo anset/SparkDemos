@@ -2,5 +2,5 @@
 
 
 
-1. [A Simple Spark Streaming example using Apache Kafka] (/anset/SparkDemos/tree/master/SimpleKafkaStreaming)
+1. [A Simple Spark Streaming example using Apache Kafka] (https://github.com/anset/SparkDemos/tree/master/SimpleKafkaStreaming)
 
