@@ -70,6 +70,7 @@ On this page you can find the direct_kafka_wordcount.py python script that has t
                  ./direct_kafka_wordcount.py 192.168.2.53:6667 sparkstreaming
 
 The first option references the streaming jar that contains the Kafka Utils for Spark streaming. If these libraries are not available on your system, they will automatically be downloaded and installed for you.
+**Note:** Make sure that the spark-streaming-kafka version is equal to the version of spark you are using. In the example above, we are using spark 1.5.2 so we specify ':1.5.2' at the end of the first line.
 
 The second option insructs spark-sybmit to deloy the streaming job on the Hadoop cluster instead of running it locally.
 
